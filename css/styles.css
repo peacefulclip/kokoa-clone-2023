@@ -1,0 +1,39 @@
+/* import 파일 순서를 지키는 것이 중요하다! */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+@import "reset.css";
+@import "variables.css";
+@import "more.css";
+
+/* Components */
+@import "components/status-bar.css";
+@import "components/nav-bar.css";
+@import "components/screen-header.css";
+@import "components/user-component.css";
+@import "components/badge.css";
+@import "components/pointer.css";
+@import "components/icon-row.css";
+@import "components/alt-header.css";
+@import "components/no-mobile.css";
+
+/* Screens */
+@import "screens/login.css";
+@import "screens/friends.css";
+@import "screens/find.css";
+@import "screens/more.css";
+@import "screens/setting.css";
+@import "screens/chats.css";
+@import "screens/chat.css";
+
+
+
+body{font-family: "Open Sans", sans-serif;
+    color: #2D363E;
+}
+
+.main-screen {
+    padding: 0px var(--horizontal-space);
+}
+
+
+
