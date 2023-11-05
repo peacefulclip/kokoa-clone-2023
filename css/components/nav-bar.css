@@ -1,0 +1,71 @@
+.nav {
+    background-color: #f9f9fa;
+    padding: 20px 50px;
+    border-top: 1px solid #D9D9D9;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box; /* padding 입력해도 내가 처음에 원했던 box size 변경하지 않음 */
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__link {
+    color: #2D363E;
+    position: relative;
+}
+
+@keyframes notificationAnimation {
+    0% {
+        transform: none;
+    }
+    50%{
+        transform: translateY(-5px) rotateY(360deg); 
+    }
+    100%{
+        transform: none;
+    }
+}
+
+.nav_notification {
+    position: absolute; /* 가장 가까운 position: relative 가진 부모 기준으로 움직이므로 꼭 설정해주어야 한다! */
+    left: 15px;
+    bottom: 15px;
+    animation: notificationAnimation 2s ease-in-out infinite;
+}
+
+@keyframes appearBtnAnimation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  
+  .nav__btn {
+    transform: translateY(50px);
+    opacity: 0;
+    animation: appearBtnAnimation 0.3s ease-in-out forwards;
+  }
+
+  .nav li:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+
+  .nav li:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+
+  .nav li:nth-child(3) {
+    animation-delay: 0.8s;
+  }
+  
+  .nav li:last-child {
+    animation-delay: 1s;
+  }
+
